@@ -40,10 +40,10 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y   |  U  |  I  |  O  |  P  | ENT   |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  | '     |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N   |  M  |  ,  |  .  |  /  | SHIFT |
-//                    | GUI | LWR | SPC |   | BKSP | RSE | ALT |
+// | ESC  |  Q  |  W      |  E     |  R     |  T  |   |  Y   |  U     |  I     |  O       |  P  | ENT   |
+// | TAB  |  A  |  S CTRL |  D ALT |  F CMD |  G  |   |  H   |  J CMD |  K ALT |  L  CTRL |  ;  | '     |
+// | SHFT |  Z  |  X      |  C     |  V     |  B  |   |  N   |  M     |  ,     |  .       |  /  | SHIFT |
+//                        | GUI    | LWR    | SPC |   | BKSP | RSE    | ALT    |
                         display-name = "Base";
                         bindings = <
    &kp ESC    &kp Q  &kp W         &kp E        &kp R        &kp T        &kp Y     &kp U        &kp I        &kp O         &kp P     &kp RET
@@ -55,10 +55,10 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC   |  1  |  2  |  3  |  4  |  5  |   |  6    |  7   |  8   |  9    |  0  | ENT  |
-// | TAB   |     | CTR | ALT | GUI |     |   | LEFT  | DOWN |  UP  | RIGHT |     |      |
-// | SHFT  |     |     |     |     |     |   | BTCLR | BT1  |  BT2 | BT3   | BT4 | BT5  |
-//                     | GUI |     | SPC |   | BKSP  |      |  ALT |
+// | ESC   |  1  |  2   |  3  |  4  |  5  |   |  6    |  7   |  8   |  9    |  0  | ENT  |
+// | TAB   |     | CTRL | ALT | GUI |     |   | LEFT  | DOWN |  UP  | RIGHT |     |      |
+// | SHFT  |     |      |     |     |     |   | BTCLR | BT1  |  BT2 | BT3   | BT4 | BT5  |
+//                      | GUI |     | SPC |   | BKSP  |      |  ALT |
                         display-name = "Lower";
                         bindings = <
    &kp ESC     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6      &kp N7        &kp N8        &kp N9       &kp N0        &kp RET
