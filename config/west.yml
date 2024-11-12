@@ -6,7 +6,8 @@ manifest:
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
+      # remote: zmkfirmware
+      remote: zmkfirmware-pete
       # revision: main
       revision: feat/pointers-move-scroll
       import: app/west.yml
