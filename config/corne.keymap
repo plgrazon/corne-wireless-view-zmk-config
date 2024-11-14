@@ -13,20 +13,18 @@
 #define LOWER   1
 #define RAISE   2
 
-/*
- * &mmv {
- *     acceleration-exponent = <1>;  // 1
- *     time-to-max-speed-ms = <300>; // 300
- *     delay-ms = <0>;
- *     trigger-period-ms = <8>;      // 16
- * };
- * &msc {
- *     acceleration-exponent = <1>;  // 0
- *     time-to-max-speed-ms = <40>;  // 300
- *     delay-ms = <0>;
- *     trigger-period-ms = <8>;      // 16
- * };
- */
+&mmv {
+    acceleration-exponent = <1>;  // 1
+    time-to-max-speed-ms = <300>; // 300
+    delay-ms = <0>;
+    trigger-period-ms = <8>;      // 16
+};
+&msc {
+    acceleration-exponent = <1>;  // 0
+    time-to-max-speed-ms = <40>;  // 300
+    delay-ms = <0>;
+    trigger-period-ms = <8>;      // 16
+};
 
 / {
   behaviors {
@@ -76,10 +74,10 @@
 //                        | GUI   |        | SPC  |   | BKSP  |      |  ALT |
                         display-name = "Lower";
                         bindings = <
-   &kp ESC    &hml LCTRL N1  &hml LCTRL N2   &hml LGUI N3   &kp N4           &kp N5          &kp N6      &kp N7        &kp N8        &kp N9       &kp N0        &kp RET
-   &kp TAB    &trans         &mkp MB1        &mv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT    &trans        &trans
-   &kp LSHFT  &trans         &mmv MOVE_LEFT  &mv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
-                          	                 &kp LGUI       &trans           &kp SPACE       &kp BSPC    &trans        &kp RALT
+   &kp ESC    &hml LCTRL N1  &hml LCTRL N2   &hml LGUI N3    &kp N4           &kp N5          &kp N6      &kp N7        &kp N8        &kp N9       &kp N0        &kp RET
+   &kp TAB    &trans         &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT    &trans        &trans
+   &kp LSHFT  &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
+                          	                 &kp LGUI        &trans           &kp SPACE       &kp BSPC    &trans        &kp RALT
                         >;
                 };
 
