@@ -72,31 +72,31 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------
-// | ESC   |  1  | 2 CTRL | 3 ALT | 4 CMD  |  5   |   |  6    |  7   |  8   |  9    |  0  | ENT  |
-// | TAB   |     | MC1    | MUP   | MC2    | SCUP |   | LEFT  | DOWN |  UP  | RIGHT |     |      |
-// | SHFT  |     | MLT    | MDN   | MRT    | SCDN |   | BTCLR | BT1  |  BT2 | BT3   | BT4 | BT5  |
-//                        | GUI   |        | SPC  |   | BKSP  |      |  ALT |
+// | ESC   |  1  | 2 CTRL | 3 ALT | 4 CMD  |  5   |   |  6    |  7 CMD  |  8 ALT  |  9 CTRL  |  0  | ENT  |
+// | TAB   |     | MC1    | MUP   | MC2    | SCUP |   | LEFT  |  DOWN   |  UP     |  RIGHT   |     |      |
+// | SHFT  |     | MLT    | MDN   | MRT    | SCDN |   | BTCLR |  BT1    |  BT2    |  BT3     | BT4 | BT5  |
+//                        | GUI   |        | SPC  |   | BKSP  |         |  ALT    |
                         display-name = "Lower";
                         bindings = <
-   &kp ESC    &hml LCTRL N1  &hml LCTRL N2   &hml LGUI N3    &kp N4           &kp N5          &kp N6      &kp N7        &kp N8        &kp N9       &kp N0        &kp RET
-   &kp TAB    &trans         &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT    &trans        &trans
-   &kp LSHFT  &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4
-                          	                 &kp LGUI        &trans           &kp SPACE       &kp BSPC    &trans        &kp RALT
+   &kp ESC    &kp N1  &hml LCTRL N2   &hml LALT N3    &hml LGUI N4     &kp N5          &kp N6      &hml RGUI N7  &hml RALT N8  &hml RCTRL N9  &kp N0        &kp RET
+   &kp TAB    &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &trans        &trans
+   &kp LSHFT  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+                          	          &kp LGUI        &trans           &kp SPACE       &kp BSPC    &trans        &kp RALT
                         >;
                 };
 
                 raise_layer {
 // --------------------------------------------------------------------------------
-// | ESC  |  !  |  @  |  #  |  $  |  %  |   |  ^   |  &  |  *  |  (  |  )  | ENT  |
-// | CTRL |     |     |     |     |     |   |  -   |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _   |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | BKSP |     | ALT |
+// | ESC  |  !  |  @ CTRL |  # ALT  |  $ CMD  |  %  |   |  ^   |  & CMD |  * ALT |  ( CTRL |  )  | ENT  |
+// | CTRL |     |         |         |         |     |   |  -   |  =     |  [     |  ]      |  \  |  `   |
+// | SHFT |     |         |         |         |     |   |  _   |  +     |  {     |  }      | "|" |  ~   |
+//                        |  GUI    |         | SPC |   | BKSP |        |  ALT   |
                         display-name = "Raise";
                         bindings = <
-   &kp ESC    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp RET
-   &kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-   &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                    	          &kp LGUI  &trans    &kp SPACE    &kp BSPC   &trans     &kp RALT
+   &kp ESC    &kp EXCL  &hml LCTRL AT  &hml LALT HASH  &hml LGUI DLLR  &kp PRCNT    &kp CARET  &hml RGUI AMPS  &hml RALT KP_MULTIPLY  &hml RCTRL LPAR  &kp RPAR  &kp RET
+   &kp LCTRL  &trans    &trans         &trans          &trans          &trans       &kp MINUS  &kp EQUAL       &kp LBKT               &kp RBKT         &kp BSLH  &kp GRAVE
+   &kp LSHFT  &trans    &trans         &trans          &trans          &trans       &kp UNDER  &kp PLUS        &kp LBRC               &kp RBRC         &kp PIPE  &kp TILDE
+                    	               &kp LGUI        &trans          &kp SPACE    &kp BSPC   &trans          &kp RALT
                         >;
                 };
         };
