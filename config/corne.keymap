@@ -68,37 +68,37 @@
    &kp ESC    &kp Q  &kp W         &kp E        &kp R        &kp T        &kp Y     &kp U        &kp I        &kp O         &kp P     &kp RET
    &kp TAB    &kp A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G        &kp H     &hmr RGUI J  &hmr RALT K  &hmr RCTRL L  &kp SEMI  &kp SQT
    &kp LSHFT  &kp Z  &kp X         &kp C        &kp V        &kp B        &kp N     &kp M        &kp COMMA    &kp DOT       &kp FSLH  &kp RSHFT
-                                   &kp LGUI     &tog 1       &kp SPACE    &kp BSPC  &tog 2       &kp RALT
+                                   &kp LGUI     &to LOWER    &kp SPACE    &kp BSPC  &to RAISE    &kp RALT
                         >;
                 };
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------
 // | ESC   |  1  | 2 CTRL | 3 ALT | 4 CMD  |  5   |   |  6    |  7 CMD  |  8 ALT  |  9 CTRL  |  0  | ENT  |
-// | TAB   |     | MC1    | MUP   | MC2    | SCUP |   | LEFT  |  DOWN   |  UP     |  RIGHT   | DEL | MEDIA|
-// | SHFT  |     | MLT    | MDN   | MRT    | SCDN |   | BTCLR |  BT1    |  BT2    |  BT3     | BT4 | BT5  |
-//                        | GUI   | BASE   | SPC  |   | BKSP  |         |  ALT    |
+// | TAB   | PREV| PLAY   | NEXT  | VOL_DN |VOL_UP|   | LEFT  |  DOWN   |  UP     |  RIGHT   | DEL |      |
+// | SHFT  | MUTE| BRI_DN | BRI_UP|        |      |   | BTCLR |  BT1    |  BT2    |  BT3     | BT4 | BT5  |
+//                        | GUI   | MEDIA  | SPC  |   | BKSP  | BASE    |  ALT    |
                         display-name = "Lower";
                         bindings = <
-   &kp ESC    &kp N1  &hml LCTRL N2   &hml LALT N3    &hml LGUI N4     &kp N5          &kp N6      &hml RGUI N7  &hml RALT N8  &hml RCTRL N9  &kp N0        &kp RET
-   &kp TAB    &trans  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &kp DEL       &to MEDIA
-   &kp LSHFT  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
-                                      &kp LGUI        &to DEFAULT      &kp SPACE       &kp BSPC    &trans        &kp RALT
+   &kp ESC    &kp N1      &hml LCTRL N2  &hml LALT N3  &hml LGUI N4  &kp N5          &kp N6      &hml RGUI N7  &hml RALT N8  &hml RCTRL N9  &kp N0        &kp RET
+   &kp TAB    &kp C_PREV  &kp C_PP       &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &kp DEL       &trans
+   &kp LSHFT  &kp C_MUTE  &kp C_BRI_DN   &kp C_BRI_UP  &trans        &trans          &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+                                         &kp LGUI      &to MEDIA     &kp SPACE       &kp BSPC    &to DEFAULT   &kp RALT
                         >;
                 };
 
                 raise_layer {
 // --------------------------------------------------------------------------------
 // | ESC  |  !  |  @ CTRL |  # ALT  |  $ CMD  |  %  |   |  ^   |  & CMD |  * ALT |  ( CTRL |  )  | ENT  |
-// | CTRL |     |         |         |         |     |   |  -   |  =     |  [     |  ]      |  \  | FN   |
+// | CTRL |     |         |         |         |     |   |  -   |  =     |  [     |  ]      |  \  |  `   |
 // | SHFT |     |         |         |         |     |   |  _   |  +     |  {     |  }      | "|" |  ~   |
-//                        |  GUI    |         | SPC |   | BKSP | BASE   |  ALT   |
+//                        |  GUI    | BASE    | SPC |   | BKSP | FN     |  ALT   |
                         display-name = "Raise";
                         bindings = <
    &kp ESC    &kp EXCL  &hml LCTRL AT  &hml LALT HASH  &hml LGUI DLLR  &kp PRCNT    &kp CARET  &hml RGUI AMPS  &hml RALT KP_MULTIPLY  &hml RCTRL LPAR  &kp RPAR  &kp RET
-   &kp LCTRL  &trans    &trans         &trans          &trans          &trans       &kp MINUS  &kp EQUAL       &kp LBKT               &kp RBKT         &kp BSLH  &to FN
+   &kp LCTRL  &trans    &trans         &trans          &trans          &trans       &kp MINUS  &kp EQUAL       &kp LBKT               &kp RBKT         &kp BSLH  &kp GRAVE
    &kp LSHFT  &trans    &trans         &trans          &trans          &trans       &kp UNDER  &kp PLUS        &kp LBRC               &kp RBRC         &kp PIPE  &kp TILDE
-                                       &kp LGUI        &trans          &kp SPACE    &kp BSPC   &to DEFAULT     &kp RALT
+                                       &kp LGUI        &to DEFAULT     &kp SPACE    &kp BSPC   &to FN          &kp RALT
                         >;
                 };
 
