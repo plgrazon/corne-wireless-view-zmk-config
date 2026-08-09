@@ -75,15 +75,15 @@
                 lower_layer {
 // ---------------------------------------------------------------------------------------
 // | ESC   |  1  | 2 CTRL | 3 ALT | 4 CMD  |  5   |   |  6    |  7 CMD  |  8 ALT  |  9 CTRL  |  0  | ENT  |
-// | TAB   | PREV| PLAY   | NEXT  | VOL_DN |VOL_UP|   | LEFT  |  DOWN   |  UP     |  RIGHT   | DEL |      |
-// | SHFT  | MUTE| BRI_DN | BRI_UP|        |      |   | BTCLR |  BT1    |  BT2    |  BT3     | BT4 | BT5  |
+// | TAB   | SCL | MC1    | MUP   | MC2    | SCUP |   | LEFT  |  DOWN   |  UP     |  RIGHT   |     |      |
+// | SHFT  | SCR | MLT    | MDN   | MRT    | SCDN |   | BTCLR |  BT1    |  BT2    |  BT3     | BT4 | BT5  |
 //                        | GUI   | MEDIA  | SPC  |   | BKSP  | BASE    |  ALT    |
                         display-name = "Lower";
                         bindings = <
-   &kp ESC    &kp N1      &hml LCTRL N2  &hml LALT N3  &hml LGUI N4  &kp N5          &kp N6      &hml RGUI N7  &hml RALT N8  &hml RCTRL N9  &kp N0        &kp RET
-   &kp TAB    &kp C_PREV  &kp C_PP       &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &kp DEL       &trans
-   &kp LSHFT  &kp C_MUTE  &kp C_BRI_DN   &kp C_BRI_UP  &trans        &trans          &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
-                                         &kp LGUI      &to MEDIA     &kp SPACE       &kp BSPC    &to DEFAULT   &kp RALT
+   &kp ESC    &kp N1          &hml LCTRL N2   &hml LALT N3    &hml LGUI N4     &kp N5          &kp N6      &hml RGUI N7  &hml RALT N8  &hml RCTRL N9  &kp N0        &kp RET
+   &kp TAB    &msc MOVE_LEFT  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &msc MOVE_UP    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT      &trans        &trans
+   &kp LSHFT  &msc MOVE_RIGHT &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_DOWN  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+                                              &kp LGUI        &to MEDIA        &kp SPACE       &kp BSPC    &to DEFAULT   &kp RALT
                         >;
                 };
 
